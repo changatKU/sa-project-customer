@@ -113,6 +113,7 @@ public class OrderProductController {
             }
             System.out.println(CurrentObject.getProducts().toString());
         } catch (Exception e) {
+            errorText.setText("มีบางอย่างผิดพลาด");
             e.printStackTrace();
         }
 

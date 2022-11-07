@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.OrderListController">
@@ -27,11 +28,20 @@
       </HBox>
       <HBox VBox.vgrow="ALWAYS">
          <children>
-            <VBox HBox.hgrow="ALWAYS">
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
                <children>
-                  <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                  <HBox alignment="CENTER" maxWidth="800.0" spacing="16.0" VBox.vgrow="NEVER">
                      <children>
-                        <ListView fx:id="orderItemsLV" prefWidth="350.0" />
+                        <ListView fx:id="orderItemsLV" prefWidth="300.0" />
+                        <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="300.0">
+                           <children>
+                              <Text fx:id="orderDetailText" strokeType="OUTSIDE" strokeWidth="0.0" text="ด้วยความประสงคีท่งจหตจ่ิคจิหคจ  จใจห่ลจค จใหิจ " wrappingWidth="250.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
                      </children>
                   </HBox>
                </children>
