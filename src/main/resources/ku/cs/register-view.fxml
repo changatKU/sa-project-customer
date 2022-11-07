@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.RegisterController">
+   <children>
+      <Button layoutX="24.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="510.0" layoutY="127.0" text="Register">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <VBox layoutX="198.0" layoutY="250.0" prefHeight="250.0" prefWidth="200.0">
+         <children>
+            <Label text="Username" />
+            <TextField fx:id="usernameTF" />
+            <Label text="Password">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="passwordTF" />
+            <Label text="Confirm Password">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="confirmPasswordTF" />
+            <Label text="Telephone">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="telephoneTF" />
+         </children>
+      </VBox>
+      <VBox layoutX="763.0" layoutY="245.0" prefHeight="250.0" prefWidth="200.0">
+         <children>
+            <Label text="Name / Company Name" />
+            <TextField fx:id="nameTF" />
+            <Label text="Tax ID">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="taxIdTF" />
+            <Label text="Address">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="addressTA" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <Button layoutX="883.0" layoutY="525.0" mnemonicParsing="false" onAction="#handleRegisterBtn" text="Register">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="statusLB" layoutX="578.0" layoutY="601.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
