@@ -1,7 +1,6 @@
 package ku.cs.controllers;
 
 import com.github.saacsos.FXRouter;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import ku.cs.models.Product;
@@ -11,10 +10,8 @@ import ku.cs.strategy.CurrentObject;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class MyCartController {

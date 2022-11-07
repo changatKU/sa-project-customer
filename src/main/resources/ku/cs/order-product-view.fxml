@@ -4,63 +4,92 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.OrderProductController">
+
+<VBox prefHeight="887.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.OrderProductController">
    <children>
-      <VBox layoutX="528.0" layoutY="205.0" prefHeight="248.0" prefWidth="159.0">
+      <HBox alignment="BASELINE_LEFT">
          <children>
-            <Label text="ความกว้าง">
+            <Button mnemonicParsing="false" onAction="#handleBackBtn" text="Back">
                <font>
                   <Font size="14.0" />
                </font>
-            </Label>
-            <TextField fx:id="widthTF" />
-            <Label text="ความยาว">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="lengthTF" />
-            <Label text="ความหนา">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="gramTF" />
-            <Label text="จำนวน">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <TextField fx:id="quantityTF" />
-            <Button mnemonicParsing="false" onAction="#handleAddToCartBtn" prefHeight="26.0" prefWidth="104.0" text="Add to cart">
-               <VBox.margin>
-                  <Insets left="60.0" top="10.0" />
-               </VBox.margin>
             </Button>
+            <VBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="nameLB" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="432.0" text="name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
-      </VBox>
-      <Button layoutX="42.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleBackBtn" text="Back">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Label fx:id="nameLB" alignment="CENTER_RIGHT" layoutX="749.0" layoutY="28.0" prefHeight="27.0" prefWidth="432.0" text="name">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      </HBox>
+      <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <VBox prefHeight="303.0" prefWidth="375.0" spacing="8.0">
+                     <children>
+                        <Label text="ความกว้าง (เซนติเมตร)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="ใส่ความกว้างของกระดาษที่ต้องการจะทำการสั่งซื้อ" textFill="#000000b2" />
+                        <TextField fx:id="widthTF" />
+                        <Label text="ความยาว (เซนติเมตร)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="33.0" text="ใส่ความยาวของกระดาษที่ต้องการจะทำการสั่งซื้อ" textFill="#000000b2" />
+                        <TextField fx:id="lengthTF" />
+                        <Label text="ความหนาของกระดาษ (แกรม)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Text fill="#000000b2" strokeType="OUTSIDE" strokeWidth="0.0" text="ใส่ความหนาของกระดาษที่ต้องการจะทำการสั่งซื้อ โดยให้มีหน่วยเป็นแกรม ระว่าง 200 ถึง 700 แกรม" wrappingWidth="392.0987548828125" />
+                        <TextField fx:id="gramTF" />
+                        <Label text="น้ำหนักของกระดาษทั้งหมด (กิโลกรัม)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Text fill="#000000b2" layoutX="10.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ใส่นำ้หนักของกระดาษ" wrappingWidth="392.0987548828125" />
+                        <TextField fx:id="quantityTF" />
+                        <Text fx:id="errorText" fill="#b22828b2" strokeType="OUTSIDE" strokeWidth="0.0" text="errortext" wrappingWidth="392.0987548828125" />
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleAddToCartBtn" prefHeight="26.0" prefWidth="104.0" text="Add to cart" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
    </children>
-</AnchorPane>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</VBox>
