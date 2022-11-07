@@ -39,4 +39,12 @@ public class MainController {
             throw new RuntimeException("Can't go to My Cart view");
         }
     }
+
+    public void handleMyOrderBtn(){
+        try {
+            FXRouter.goTo("my-order");
+        } catch (IOException e) {
+            throw new RuntimeException("Can't go to My Cart view");
+        }
+    }
 }

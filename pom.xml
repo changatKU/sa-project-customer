@@ -40,12 +40,18 @@
         </dependency>
 
 
-        <dependency>
+        <!-- <dependency>
             <groupId>com.github.saacsos</groupId>
             <artifactId>FXRouter</artifactId>
             <version>1.0.0</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/src/main/resources/FXRouter.jar</systemPath>
+        </dependency> -->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
         </dependency>
 
     </dependencies>

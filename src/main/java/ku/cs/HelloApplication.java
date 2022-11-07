@@ -24,6 +24,7 @@ public class HelloApplication extends Application {
         FXRouter.when("main", packageStr + "main-view.fxml");
         FXRouter.when("order-product", packageStr + "order-product-view.fxml");
         FXRouter.when("my-cart", packageStr + "my-cart-view.fxml");
+        FXRouter.when("my-order", packageStr + "ordered-items-view.fxml");
     }
 
     public static void main(String[] args) {

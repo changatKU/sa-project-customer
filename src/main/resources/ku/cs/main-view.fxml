@@ -24,6 +24,14 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </Button>
+            <Button mnemonicParsing="false" onAction="#handleMyOrderBtn" prefHeight="40.0" prefWidth="177.0" text="My Order">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
          </children>
       </VBox>
       <Button layoutX="27.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleLogOutBtn" text="Log out">

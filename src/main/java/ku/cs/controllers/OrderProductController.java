@@ -42,6 +42,7 @@ public class OrderProductController {
         widthTF.setText("");
         lengthTF.setText("");
         gramTF.setText("");
+        quantityTF.setText("");
 
         int quantity = Integer.parseInt(quantityTF.getText());
         String query = "SELECT P_ID FROM Product WHERE " +
